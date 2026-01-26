@@ -9,9 +9,16 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 
-&mt { flavor = "tap-unless-interrupted"; };
+&mt { flavor = "tap-preferred"; };
 
 / {
+    behaviors {
+        // Пример: изменение параметров для стандартного mt
+
+        mt {
+            flavor = "tap-unless-interrupted"; // Меняем алгоритм распознавания
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
