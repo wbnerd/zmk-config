@@ -10,6 +10,13 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    behaviors {
+        // Пример: изменение параметров для стандартного mt
+        &mt {
+            flavor = "tap-unless-interrupted"; // Меняем алгоритм распознавания
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
