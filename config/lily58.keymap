@@ -22,6 +22,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        alt_caps {
+            bindings = <&kp CAPS>;
+            key-positions = <28 31>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -53,11 +62,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans        &trans            &trans        &trans             &trans         &kp PAGE_UP
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans        &kp HOME          &kp UP_ARROW  &kp END            &trans         &kp PAGE_DOWN
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp LC(LEFT)  &kp LEFT          &kp DOWN      &kp RIGHT          &kp RC(RIGHT)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans        &kp LA(LC(LEFT))  &trans        &kp RA(RC(RIGHT))  &trans         &trans
-                        &trans  &trans  &trans  &trans    &trans  &trans        &trans            &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans         &trans            &trans        &trans             &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &kp PAGE_UP    &kp HOME          &kp UP_ARROW  &kp END            &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &kp PAGE_DOWN  &kp LEFT          &kp DOWN      &kp RIGHT          &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans         &kp LA(LC(LEFT))  &trans        &kp RA(RC(RIGHT))  &trans  &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans         &trans            &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
